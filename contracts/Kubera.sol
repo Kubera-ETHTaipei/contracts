@@ -8,7 +8,7 @@ import {SQLHelpers} from "@tableland/evm/contracts/utils/SQLHelpers.sol";
 import {TablelandController} from "@tableland/evm/contracts/TablelandController.sol";
 import {TablelandPolicy} from "@tableland/evm/contracts/TablelandPolicy.sol";
 
-contract Example  is TablelandController, ERC721Holder {
+contract Kubera  is TablelandController, ERC721Holder {
 
 
     address public owner;
@@ -107,16 +107,3 @@ contract Example  is TablelandController, ERC721Holder {
         return SQLHelpers.toNameFromId(_TABLE_PREFIX, _tableId);
     }
 }
-
-
-//Deployed sepolia: 0x41dc36d271d27a3a88fa9993A84572E1daA8A027
-
-//https://testnets.tableland.network/api/v1/tables/11155111/1377
-//0xF483a5f2FA0F80896C4ccF2Bc593a74d4e1deB1A
-
-//https://testnets.tableland.network/api/v1/receipt/11155111/0xe1ae147b847f1c08a25aa400ee6d842771c8e9d25571522e50d87295fa071668
-
-// https://testnets.tableland.network/api/v1/query?statement=select%20%2A%20from%20credits_11155111_1374
-// https://testnets.tableland.network/api/v1/query?statement=select%20%2A%20from%20credits_11155111_1378
-
-//https://testnets.tableland.network/api/v1/query?statement=select%20*%20from%20credits_11155111_1312%20where%20address%20=%20'0x7062c36a0f657060bb8057debdb8ec69bdad9aa4'
