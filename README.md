@@ -11,7 +11,13 @@ ZIRCUIT TESTNET - 0xd9276777548d4b1e7b35b87d1ED9F8bA6FFcBfC6 <br/>
 
 
 ## FLOW OF THE CONTRACT - kubera.sol
-The Kubera contract is used to store and update credit values along with their last update timestamp of an user. Since, this is generally a gas-intensive method(it used sstore and sload), we realized it would be a hindrance to the UX of the application. In view of that, we are using Tableland contracts to store the data in Tableland tables and not inside the storage of this contract. This reduces gas costs by almost 40%. The contract majorly works on these 4 functions:
+The Kubera contract is used to store and update credit values along with their last update timestamp of an user. Since, this is generally a gas-intensive method(it used sstore and sload), we realized it would be a hindrance to the UX of the application.
+We brainstormedovern how to store user data. We were not ready to store it in centralized databases like postgreSQL. Nor did we want to use IPFS for this since it would result in unnecessary complication, wherein we would need to store a mapping for a user address to a IPFS hash. We did not want it to be as simple as storing it directly in the contract. There are 2 reasons for this:
+* We want an user's credit to be private. by default, data inside a smart contract is public.
+* Storing in contract will result in unnecessarily high gas fees for storing and loading(store/sload)
+Tableland provides a better solution since data is not stored in the contract. Running an insert/update function on Tableland tables is much cheaper in terms of gas. There are some security concerns however (read contracts repo readme for more info)
+
+In view of that, we are using Tableland contracts to store the data in Tableland tables and not inside the storage of this contract. This reduces gas costs by almost 40%. The contract majorly works on these 4 functions:
 
 - `createTable()`: this is an initial function that is called only once by the owner of the contract to do the initial creation of the SQL table. This essentially sets up the schema of the table. <br/>
 - `insertIntoTable(address user,uint256 credit,uint256 timestamp)`: adds a new user's calculated credit score and th etimestamp it was computed till into the table as a new row. <br/>
