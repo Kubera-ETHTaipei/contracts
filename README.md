@@ -3,10 +3,10 @@
 
 ## DEPLOYED CONTRACTS
 
-SCROLL SEPOLIA- 0x6641126700308379cdb602b4e8dc1afc13d6c088 <br/>
-OPTIMISM SEPOLIA- 0xd9276777548d4b1e7b35b87d1ED9F8bA6FFcBfC6 <br/>
-THUNDERCORE TESTNET - 0xd9276777548d4b1e7b35b87d1ED9F8bA6FFcBfC6 <br/>
-LINEA TESTNET - 0xd9276777548d4b1e7b35b87d1ED9F8bA6FFcBfC6 <br/>
+[SCROLL SEPOLIA](https://sepolia.scrollscan.com/address/0x6641126700308379cdb602b4e8dc1afc13d6c088)- 0x6641126700308379cdb602b4e8dc1afc13d6c088 <br/>
+[OPTIMISM SEPOLIA](https://sepolia-optimism.etherscan.io/address/0xd9276777548d4b1e7b35b87d1ED9F8bA6FFcBfC6)- 0xd9276777548d4b1e7b35b87d1ED9F8bA6FFcBfC6 <br/>
+[THUNDERCORE TESTNET](https://explorer-testnet.thundercore.com/address/0xd9276777548d4b1e7b35b87d1ED9F8bA6FFcBfC6/transactions) - 0xd9276777548d4b1e7b35b87d1ED9F8bA6FFcBfC6 <br/>
+[LINEA TESTNET](https://goerli.lineascan.build/address/0xd9276777548d4b1e7b35b87d1ED9F8bA6FFcBfC6) - 0xd9276777548d4b1e7b35b87d1ED9F8bA6FFcBfC6 <br/>
 ZIRCUIT TESTNET - 0xd9276777548d4b1e7b35b87d1ED9F8bA6FFcBfC6 <br/>
 
 
@@ -27,16 +27,3 @@ However, there is a small security concern since the data can be accessed by hit
 The contract `PrivateCredit.sol` is deployed on Ten Protocol which is an EVM chain allowing private storage and state transitions by default. This essentially solves the security concern that is referred above. This contract is a lot more sophisticated and has a nascent formula to calculate a credit score based on an user's onchain activity. All events,variables and storage can only be accessed by whitelisted addresses which in this case will be the selected Defi Protocols.
 
 
-# Sample Hardhat Project
-
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
-
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
-```
