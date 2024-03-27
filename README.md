@@ -3,6 +3,7 @@
 
 ## DEPLOYED CONTRACTS
 
+TEN PROTOCOL - 0xd9276777548d4b1e7b35b87d1ED9F8bA6FFcBfC6
 [SCROLL SEPOLIA](https://sepolia.scrollscan.com/address/0x6641126700308379cdb602b4e8dc1afc13d6c088)- 0x6641126700308379cdb602b4e8dc1afc13d6c088 <br/>
 [OPTIMISM SEPOLIA](https://sepolia-optimism.etherscan.io/address/0xd9276777548d4b1e7b35b87d1ED9F8bA6FFcBfC6)- 0xd9276777548d4b1e7b35b87d1ED9F8bA6FFcBfC6 <br/>
 [THUNDERCORE TESTNET](https://explorer-testnet.thundercore.com/address/0xd9276777548d4b1e7b35b87d1ED9F8bA6FFcBfC6/transactions) - 0xd9276777548d4b1e7b35b87d1ED9F8bA6FFcBfC6 <br/>
@@ -28,8 +29,8 @@ This is novel approach where no data of any user can be fetched directy from the
 
 However, there is a small security concern since the data can be accessed by hitting a specific API. This is something which we will work on upcoming updates. Some approaches we have been thinking is to implement Fully Homomorphic Encryption(FHE) and then store the encrypted values on-chain.
 
-## Alternate Approach: Using Ten Protocol
+## Private State Chain : Using Ten Protocol
 
-The contract `PrivateCredit.sol` is deployed on Ten Protocol which is an EVM chain allowing private storage and state transitions by default. This essentially solves the security concern that is referred above. This contract is a lot more sophisticated and has a nascent formula to calculate a credit score based on an user's onchain activity. All events,variables and storage can only be accessed by whitelisted addresses which in this case will be the selected Defi Protocols.
+The contract `PrivateCredit.sol` is deployed on Ten Protocol which is an EVM chain allowing private storage and state transitions by default. This essentially solves the security concern that is referred above and is the ideal environment for Kubera to be built on further. This contract is a lot more sophisticated and has a nascent formula to calculate a credit score based on an user's onchain activity. All events,variables and storage can only be accessed by whitelisted addresses which in this case will be the selected Defi Protocols.
 
 
